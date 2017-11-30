@@ -1,5 +1,5 @@
 class Show < ActiveRecord::Base
-  
+
   def highest_rating
     Show.maximum(:rating)
   end
@@ -15,5 +15,5 @@ class Show < ActiveRecord::Base
   def least_popular_show
     Show.find_by(rating: lowest_rating)
   end
-  
+
 end
